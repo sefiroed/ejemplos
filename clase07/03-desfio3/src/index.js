@@ -1,9 +1,13 @@
 import express from 'express';
+import fs from fs;
 import path from 'path';
 
 const puerto = 8080;
 
 const app = express();
+
+const archivo = await fs.readFile(this.carpeta, 'UTF-8');
+console.log(archivo());
 
 const server = app.listen(puerto, () =>
   console.log('Server Up en puerto', puerto)
